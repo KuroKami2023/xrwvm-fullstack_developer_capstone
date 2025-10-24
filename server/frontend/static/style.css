@@ -124,3 +124,67 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+
+.contact-container {
+    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    
+    background-color: #999;
+    border: 2px solid #0C9;
+    border-radius: 20px;
+  
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.6),
+      0 5px 15px rgba(12, 255, 153, 0.2);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    color: white;
+    padding: 40px;
+  }
+  
+  .cars-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .contact-icon {
+    width: 120px;
+    margin-top: -90px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: black;
+    box-shadow: 0 5px 20px rgba(12, 255, 153, 0.4);
+  }
+  
+  .contact-details h2 {
+    color: #0C9;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .contact-details p {
+    margin: 8px 0;
+    font-size: 1.1em;
+  }
+  
+  .contact-details a {
+    color: #0C9;
+    text-decoration: none;
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+  
