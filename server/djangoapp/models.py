@@ -1,11 +1,12 @@
 # Uncomment the following imports before adding the Model code
 
 from django.db import models
-from django.utils.timezone import now
+# from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
+
 
 # Car Make model
 class CarMake(models.Model):
@@ -21,15 +22,15 @@ class CarMake(models.Model):
 # Car Model model
 class CarModel(models.Model):
     # Choices for type
-    SEDAN = 'Sedan'
-    SUV = 'SUV'
-    WAGON = 'Wagon'
-    HATCHBACK = 'Hatchback'
+    SEDAN = "Sedan"
+    SUV = "SUV"
+    WAGON = "Wagon"
+    HATCHBACK = "Hatchback"
     TYPE_CHOICES = [
-        (SEDAN, 'Sedan'),
-        (SUV, 'SUV'),
-        (WAGON, 'Wagon'),
-        (HATCHBACK, 'Hatchback'),
+        (SEDAN, "Sedan"),
+        (SUV, "SUV"),
+        (WAGON, "Wagon"),
+        (HATCHBACK, "Hatchback"),
     ]
 
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
