@@ -52,5 +52,5 @@ jobs:
     - name: Run Linter
       run: |
         echo "Running JS lint..."
-        jshint ./server --config .jshintrc
+        jshint ./server --config ./server/.jshintrc
         echo "✅ Linted all JavaScript files successfully"
