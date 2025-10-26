@@ -38,19 +38,19 @@ jobs:
     name: Lint JavaScript Files
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: Install JSHint
-        run: npm install jshint --global
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-      - name: Run Linter
-        run: |
-          echo "Running JS lint..."
-          find ./server -name "*.js" -exec jshint {} +
-          echo "✅ Linted all JavaScript files successfully"
+    - name: Install JSHint
+      run: npm install jshint --global
+
+    - name: Run Linter
+      run: |
+        echo "Running JS lint..."
+        jshint ./server --config .jshintrc
+        echo "✅ Linted all JavaScript files successfully"
